@@ -3,22 +3,50 @@ library(gridExtra)
 library(ggbeeswarm)
 library(rmarkdown)
 library(knitr)
+library(argparse)
+library(stringr)
+library(rjson)
+library(foreach)
 
-args = commandArgs(trailingOnly=T)
+parser <- ArgumentParser(description='Create the MAD4HATTER quality report')
+parser$add_argument('--summaryFILE', type="character", help='Contains amplicon level coverage statistics.', required = TRUE)
+parser$add_argument('--samplestatFILE', type="character", help='Contains sample level coverage statistics.', required = TRUE)
+parser$add_argument('--spikein-cutadapt-json', type="character", nargs="+", help="Cutadapt spikein statistics (optional).", required = FALSE)
+parser$add_argument('--ampliconFILE', type="character", help='Amplicon panel table.', required = TRUE)
+parser$add_argument('--outDIR', type="character", help="Output directory for the quality report.", required = TRUE)
 
-summaryFILE=args[1]
-samplestatFILE=args[2]
-ampliconFILE=args[3]
-outDIR=args[4]
+args=parser$parse_args()
+print(args)
 
-##FOR DEBUGGING
-# setwd("/home/bpalmer/Documents/GitHub/mad4hatter/work/1f/0ca34bcad8061f443b16cc0aefa1ea")
-# summaryFILE="amplicon_coverage.txt"
-# samplestatFILE="sample_coverage.txt"
-# ampliconFILE="v4_amplicon_info.tsv"
-# outDIR="quality_report"
+## For debugging
+# setwd("/home/bpalmer/Documents/GitHub/mad4hatter/work/74/83d316302e4393f87190bbb2a5a8f4")
+# args$summaryFILE="amplicon_coverage.txt"
+# args$samplestatFILE="sample_coverage.txt"
+# args$ampliconFILE="v4_amplicon_info.tsv"
+# args$outDIR="quality_report"
+# args$spikein_cutadapt_json=list.files(pattern = ".spikeins.json$")
 
-df=read.table(summaryFILE,header=T)
+spikeins=NULL
+if (!is.null(args$spikein_cutadapt_json)) {
+  spikeins=foreach (ii = 1:length(args$spikein_cutadapt_json), .combine="bind_rows") %do% {
+    infile=args$spikein_cutadapt_json[[ii]]
+    json=rjson::fromJSON(file=infile)
+    if (!json$cutadapt_version %in% c("4.4")) {
+      stop(sprintf("Expected cutadapt version is %s but the user provided cutadapt json has version %s", "4.4", json$cutadapt_version))
+    }
+
+    sampleID=stringr::str_remove(infile, ".spikeins.cutadapt.json$")
+    tibble(
+      sampleID=sampleID,
+      read1_matches=json$adapters_read1[[1]]$five_prime_end$matches,
+      read2_matches=json$adapters_read2[[1]]$five_prime_end$matches
+    )
+  }
+
+  write.table(spikeins, file=file.path(args$outDIR,"spikeins.txt"), quote=F, sep ="\t", col.names=T, row.names=F)
+}
+
+df=read.table(args$summaryFILE,header=T)
 df$SampleID=as.factor(df$SampleID)
 df$Locus=as.factor(df$Locus)
 df = df %>% 
@@ -34,7 +62,7 @@ samples = df %>% select(SampleID,SampleNumber) %>% distinct() %>%
 df$SampleID=factor(df$SampleID,levels=unique(samples$SampleID))
 
 amplicon_stats=df %>% select(-Pool) %>% pivot_wider(names_from = Locus, values_from = Reads) %>% data.frame()
-write.table(amplicon_stats, file=paste(outDIR,"/amplicon_stats.txt",sep=""), quote=F, sep ="\t", col.names=T, row.names=F)
+write.table(amplicon_stats, file=file.path(args$outDIR,"amplicon_stats.txt"), quote=F, sep ="\t", col.names=T, row.names=F)
 
 sample_amplicon_stats=df %>% group_by(SampleID,Pool) %>% dplyr::summarise(medianReads=median(Reads)) %>% pivot_wider(names_from = Pool, values_from = medianReads) %>% data.frame()
 colnames(sample_amplicon_stats)=c("SampleID","Pool_1A","Pool_1AB","Pool_1B","Pool_1B2", "Pool_2")
@@ -43,7 +71,7 @@ loci_stats = df %>% group_by(SampleID) %>% group_by(SampleID,Pool) %>% dplyr::su
 colnames(loci_stats)=c("SampleID","Pool_1A","Pool_1AB","Pool_1B","Pool_1B2", "Pool_2")
 
 
-df1=read.delim(samplestatFILE,header=T)
+df1=read.delim(args$samplestatFILE,header=T)
 sample_stats=df1 %>% 
   pivot_wider(names_from = Stage, values_from = Reads) %>%
   data.frame() %>%
@@ -56,7 +84,7 @@ sample_stats=sample_stats[,c("SampleNumber","SampleID","Input","No.Dimers", "Amp
 
 colnames(sample_stats) = c("#","Sample","Input","No Dimers","Amplicons")
 
-ampdata=read.delim(ampliconFILE,header=T)
+ampdata=read.delim(args$ampliconFILE,header=T)
 
 #Histogram#
 p1=ggplot(data=df, aes(x=Reads+0.1)) +  
@@ -78,7 +106,7 @@ p1=ggplot(data=df, aes(x=Reads+0.1)) +
   theme(axis.title.y = element_text(size = 25))+
   scale_y_log10()
 
-ggsave(file="quality_report/reads_histograms.pdf", width=40, height=60, dpi=300, limitsize = FALSE)
+ggsave(file=file.path(args$outDIR, "reads_histograms.pdf"), width=40, height=60, dpi=300, limitsize = FALSE)
 
 
 #Boxplot#
@@ -121,7 +149,7 @@ p3=ggplot(df2) +
         legend.title = element_text(size = 25), 
         legend.position="bottom")
 
-ggsave(file="quality_report/swarm_plots.pdf", width=60, height=160, dpi=300, limitsize=FALSE)
+ggsave(file=file.path(args$outDIR, "swarm_plots.pdf"), width=60, height=160, dpi=300, limitsize=FALSE)
 
 #Length vs. Reads#
 df1=df %>% left_join(ampdata,by = c("Locus" = "amplicon")) %>% select(SampleID,Locus,Reads,ampInsert_length,Pool) %>% data.frame()
@@ -141,7 +169,7 @@ p4=ggplot(df1,aes(x=ampInsert_length,y=Reads+0.1,color = Pool)) + ggtitle("Locus
         legend.title = element_text(size = 25), 
         legend.position="bottom") 
 
-ggsave(file="quality_report/length_vs_reads.pdf", width=60, height=200, dpi=300, limitsize=FALSE)
+ggsave(file=file.path(args$outDIR, "length_vs_reads.pdf"), width=60, height=200, dpi=300, limitsize=FALSE)
 
 #pdf(paste(outDIR,"/QCplots.pdf",sep=""), onefile = TRUE)
 #grid.arrange(p1,p2a,p2b,p3,p4)
@@ -153,27 +181,31 @@ ggsave(file="quality_report/length_vs_reads.pdf", width=60, height=200, dpi=300,
 #ggsave(filename = paste(outDIR,"/QCplots.pdf",sep=""), plot = ml, width = 15, height = 9)
 
 
-
-
 ##RMarkdown report##
 
 currentDate <- Sys.Date()
 #rmd_file=paste(outDIR,"/QCplots.Rmd",sep="")
-rmd_file=paste(outDIR,"QCplots.Rmd",sep='/')
+rmd_file=file.path(args$outDIR,"QCplots.Rmd")
 file.create(rmd_file)
-p=list(sample_stats,sample_amplicon_stats,loci_stats,p1,p3,p4)
+p=list(spikeins,sample_stats,sample_amplicon_stats,loci_stats,p1,p3,p4)
 
 file <- tempfile()
 saveRDS(p, file)
 
-
-c(paste0("---\ntitle: \"QC summary Report\"\nauthor: \"GenMoz\"\ndate: ",
+c(paste0("---\ntitle: \"QC summary Report\"\nauthor: \"MAD4HATTER\"\ndate: ",
 currentDate,
 "\noutput: html_document\n---\n")) %>% write_lines(rmd_file)
 #c("```{r echo=FALSE, message=FALSE, warning=FALSE}\nplot_list=readRDS(file)\nlapply(plot_list,print)\n```") %>% write_lines(rmd_file,append=T)
-c("```{r echo=FALSE, results=\'asis\', message=FALSE, warning=FALSE}\nplot_list=readRDS(file)\nknitr::kable(plot_list[1], caption=\"Cutadapt Sample Statistics\")\n```") %>% write_lines(rmd_file,append=T)
-c("```{r echo=FALSE, message=FALSE, warning=FALSE}\nplot_list=readRDS(file)\nknitr::kable(plot_list[2], caption=\"Sample Median Reads per Pool\")\n```") %>% write_lines(rmd_file,append=T)
-c("```{r echo=FALSE, message=FALSE, warning=FALSE}\nplot_list=readRDS(file)\nknitr::kable(plot_list[3], caption=\"Sample Number of Loci with 100 Reads or More per Pool\")\n```") %>% write_lines(rmd_file,append=T)
-c("```{r echo=FALSE, message=FALSE, warning=FALSE}\nplot_list[-c(1:3)]\n```") %>% write_lines(rmd_file,append=T)
-
-    rmarkdown::render(rmd_file, params = list(file=file, output_file = html_document()))
+index=1
+if (!is.null(args$spikein_cutadapt_json)) {
+  c(sprintf("```{r echo=FALSE, results=\'asis\', message=FALSE, warning=FALSE}\nplot_list=readRDS(file)\nknitr::kable(plot_list[%d], caption=\"Spikein Sample Statistics\")\n```", index)) %>% write_lines(rmd_file,append=T)
+}
+index=index+1
+c(sprintf("```{r echo=FALSE, results=\'asis\', message=FALSE, warning=FALSE}\nplot_list=readRDS(file)\nknitr::kable(plot_list[%d], caption=\"Cutadapt Sample Statistics\")\n```", index)) %>% write_lines(rmd_file,append=T)
+index=index+1
+c(sprintf("```{r echo=FALSE, message=FALSE, warning=FALSE}\nplot_list=readRDS(file)\nknitr::kable(plot_list[%d], caption=\"Sample Median Reads per Pool\")\n```", index)) %>% write_lines(rmd_file,append=T)
+index=index+1
+c(sprintf("```{r echo=FALSE, message=FALSE, warning=FALSE}\nplot_list=readRDS(file)\nknitr::kable(plot_list[%d], caption=\"Sample Number of Loci with 100 Reads or More per Pool\")\n```", index)) %>% write_lines(rmd_file,append=T)
+index=index+1
+c(sprintf("```{r echo=FALSE, message=FALSE, warning=FALSE}\nplot_list[-c(1:%d)]\n```", index)) %>% write_lines(rmd_file,append=T)
+rmarkdown::render(rmd_file, params = list(file=file, output_file = html_document()))

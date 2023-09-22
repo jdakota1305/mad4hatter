@@ -21,9 +21,14 @@ process CUTADAPT {
     path("*.SAMPLEsummary.txt"), emit: sample_summary
     path("*.AMPLICONsummary.txt"), emit: amplicon_summary
     path('demuliplexed_fastqs'), emit: demultiplexed_fastqs
+    tuple val(pair_id), path("trimmed_demuxed_unknown_fastqs/${pair_id}_unknown_R1.fastq.gz"), path("trimmed_demuxed_unknown_fastqs/${pair_id}_unknown_R2.fastq.gz"), emit: unknown_fastqs
 
     script:
     """
+
+    # 'trimmed_demuxed_unknown_fastqs' is hardcoded into the script
+    # and contains the reads that could not be demultiplexed. 
+
     bash cutadapt_process.sh \
         -1 ${reads[0]} \
         -2 ${reads[1]} \

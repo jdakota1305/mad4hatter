@@ -19,6 +19,7 @@ workflow DEMULTIPLEX_AMPLICONS {
   )
 
   emit:
+  unknown_fastqs_ch = CUTADAPT.out.unknown_fastqs
   sample_summary_ch = CUTADAPT.out.sample_summary
   amplicon_summary_ch = CUTADAPT.out.amplicon_summary
   demux_fastqs_ch = CUTADAPT.out.demultiplexed_fastqs

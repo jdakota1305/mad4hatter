@@ -3,11 +3,13 @@
 include { PREPROCESS_COVERAGE } from '../modules/local/preprocess_coverage.nf'
 include { POSTPROCESS_COVERAGE } from '../modules/local/postprocess_coverage.nf'
 include { QUALITY_REPORT } from '../modules/local/quality_report.nf'
+include { SPIKEINS } from '../modules/local/spikein_process.nf'
 
 workflow QUALITY_CONTROL {
 
     // Define inputs
     take:
+    unknown_fastqs
     sample_coverage_files
     amplicon_coverage_files
     alleledata
@@ -18,6 +20,11 @@ workflow QUALITY_CONTROL {
     // Assuming 'sampleFiles' and 'ampliconFiles' are your channels for individual files
     sample_combined = sample_coverage_files.collect()
     amplicon_combined = amplicon_coverage_files.collect()
+
+    // Process raw samples with SPIKEINS i(if using)
+    if (params.spikeins) { // TODO: determine what the conditions should be
+        SPIKEINS(unknown_fastqs)
+    }
 
     // Initial Preprocessing
     PREPROCESS_COVERAGE(
@@ -40,10 +47,13 @@ workflow QUALITY_CONTROL {
         POSTPROCESS_COVERAGE.out.postprocess_amplicon_coverage : 
         PREPROCESS_COVERAGE.out.amplicon_coverage
 
+    spikein_json_ch = params.spikeins ? SPIKEINS.out.spikein_json.collect() : Channel.value(null) // Using null as a placeholder when spikeins aren't present
+
     // Reporting
     QUALITY_REPORT(
         sample_coverage_ch,
         amplicon_coverage_ch,
-        params.amplicon_info
+        params.amplicon_info,
+        spikein_json_ch
     )
 }
