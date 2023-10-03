@@ -26,9 +26,9 @@ process DADA2_PREPROCESSING {
 
     // Define output channels
     output:
-    path("filtered_${trimmed_path.baseName}/*_F_filt.fastq.gz"), emit: filtFs
-    path("filtered_${trimmed_path.baseName}/*_R_filt.fastq.gz"), emit: filtRs
-    path("filtered_${trimmed_path.baseName}/*_filter_metadata.RDS"), emit: filter_metadata
+    path("filtered_${trimmed_path.baseName}/*_F_filt.fastq.gz"), emit: filtFs, optional: true
+    path("filtered_${trimmed_path.baseName}/*_R_filt.fastq.gz"), emit: filtRs, optional: true
+    path("filtered_${trimmed_path.baseName}/*_filter_metadata.RDS"), emit: filter_metadata, optional: true
 
     // Main script to run
     script:  
