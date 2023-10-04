@@ -86,10 +86,39 @@ args_string <- paste(sapply(names(args), function(name) {
 
 log_debug(paste("Arguments parsed successfully:", args_string))
 
-# Profile and capture output for mergeSequenceTables
+# Extracting sample names
+sample_names <- sapply(args$seqtab_paths, function(path) {
+  base_name <- basename(path)
+  return(strsplit(base_name, "_seqtab.RDS")[[1]][1])
+})
+
+# Load sequence tables from RDS files
+seqtables <- lapply(args$seqtab_paths, readRDS)
+
+# Check which tables have no columns (no sequences) and log warnings
+empty_tables_samples <- c()
+
+for(i in seq_along(seqtables)) {
+  st <- seqtables[[i]]
+  current_sample_name <- sample_names[i]
+  
+  if(ncol(st) == 0) {
+    log_warn(paste("Sample:", current_sample_name, ". Sequence table has no columns (no sequences)."))
+    empty_tables_samples <- c(empty_tables_samples, current_sample_name)
+  }
+}
+
+if(length(empty_tables_samples) > 0) {
+  log_warn(paste("Samples with no sequences in sequence tables:", paste(empty_tables_samples, collapse=", ")))
+}
+
+# Filter out sequence tables with no columns before merging
+valid_seqtables <- Filter(function(st) ncol(st) > 0, seqtables)
+
+# Profile and capture output for mergeSequenceTables with valid sequence tables
 merge_profile <- profile_function(function(tables) {
     mergeSequenceTables(tables=tables)
-}, args$seqtab_paths)
+}, valid_seqtables)
 
 # Log profiling results
 log_info("mergeSequenceTables duration: {merge_profile$duration}")

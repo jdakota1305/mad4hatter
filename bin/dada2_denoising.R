@@ -153,7 +153,8 @@ perform_merging <- function(dadaFs_selected, derepFs_selected, dadaRs_selected, 
              justConcatenate = justConcatenate, 
              trimOverhang = TRUE,
              minOverlap = 10,
-             maxMismatch = 1)
+             maxMismatch = 1,
+             propagateCol = c("sequence", "quality", "n0"))
   log_debug(paste("Number of merged pairs:", length(merged_pairs)))
   log_debug("Merging complete")
   return(merged_pairs)
@@ -283,6 +284,22 @@ if (args$just_concatenate) {
 
 log_info("Saving merged data and sequence table")
 saveRDS(mergers, file = file.path(output_dir, paste0(sample_name, "_merged.RDS")))
+log_info(paste("Number of entries in mergers:", length(mergers)))
+
+# Count the number of NULL mergers before filtering
+num_null_mergers <- sum(sapply(mergers, is.null))
+
+mergers <- mergers[!sapply(mergers, is.null)]
+
+# If there were any NULL mergers, log a warning
+if (num_null_mergers > 0) {
+  log_warn(paste(num_null_mergers, "mergers were filtered out due to being NULL."))
+}
+
 seqtab <- makeSequenceTable(mergers)
+if (ncol(seqtab) == 0) {
+  log_warn("No reads were able to merge.")
+}
+
 saveRDS(seqtab, file = file.path(output_dir, paste0(sample_name, "_seqtab.RDS")))
 log_info("Processing completed")
