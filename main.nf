@@ -26,6 +26,8 @@ include { POSTPROC_ONLY } from './workflows/postproc_only.nf'
 
 // modules
 include { BUILD_ALLELETABLE } from './modules/local/build_alleletable.nf'
+include { CALCULATE_ALLELE_FREQUENCIES } from './modules/local/calculate_allele_frequencies.nf'
+
 
 def helpMessage() {
   log.info """
@@ -141,6 +143,11 @@ workflow {
       amplicon_info,
       DENOISE_AMPLICONS_1.out.denoise_ch,
       DENOISE_AMPLICONS_2.out.results_ch
+    )
+
+    // new module for allele frequencies
+    CALCULATE_ALLELE_FREQUENCIES(
+        BUILD_ALLELETABLE.out.alleledata
     )
 
     // Create the quality report now
