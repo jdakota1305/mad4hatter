@@ -1,0 +1,20 @@
+WARNING: The requested image's platform (linux/amd64) does not match the detected host platform (linux/arm64/v8) and no specific platform was requested
+2025-02-24 20:16:28,676 - INFO - Program start.
+2025-02-24 20:16:28,677 - INFO - Reading allele data from allele_data.txt and aligned ASV data from masked.alignments.txt.
+2025-02-24 20:16:28,753 - INFO - Allele data and aligned ASV data merged successfully.
+2025-02-24 20:16:28,772 - INFO - Extracting position and reference information for 91 markers.
+2025-02-24 20:16:28,784 - INFO - Position and reference information extracted successfully.
+2025-02-24 20:16:28,786 - INFO - Creating masked coordinate table for 241 loci.
+2025-02-24 20:16:28,800 - INFO - Masked coordinate dictionary created successfully.
+2025-02-24 20:16:28,825 - INFO - Generating resistance marker tables.
+2025-02-24 20:16:28,825 - INFO - Extracting resmarker info from unique ASVs.
+2025-02-24 20:16:28,875 - INFO - Merging resmarker info with samples.
+2025-02-24 20:16:28,893 - INFO - Collapsing tiled markers.
+2025-02-24 20:16:28,902 - INFO - Compiling microhaplotype of resmarkers for unique ASVs.
+2025-02-24 20:16:28,920 - INFO - Merging microhaplotype information with samples.
+2025-02-24 20:16:28,927 - INFO - Generating table of all mutation from unique pseudo cigars.
+2025-02-24 20:16:28,927 - INFO - Extracting mutations from unique pseudo CIGAR strings.
+2025-02-24 20:16:28,929 - INFO - Mutations extracted successfully.
+2025-02-24 20:16:28,936 - INFO - Writing output data to files.
+2025-02-24 20:16:28,945 - INFO - Finished writing outputs.
+2025-02-24 20:16:28,945 - INFO - Program complete.

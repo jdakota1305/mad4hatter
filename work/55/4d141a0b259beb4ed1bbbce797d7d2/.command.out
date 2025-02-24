@@ -1,0 +1,6 @@
+$denoised_asvs
+[1] "dada2.clusters.txt"
+
+$processed_asvs
+[1] "alignments.pseudocigar.txt"
+

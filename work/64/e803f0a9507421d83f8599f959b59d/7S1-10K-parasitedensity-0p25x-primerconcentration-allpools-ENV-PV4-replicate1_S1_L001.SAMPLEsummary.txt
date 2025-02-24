@@ -1,0 +1,3 @@
+Input	162920
+No Dimers	43475
+Amplicons	36211

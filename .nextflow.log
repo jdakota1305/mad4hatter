@@ -1,0 +1,207 @@
+Feb-24 14:13:22.506 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main.nf --readDIR /Users/shodanbeats/Desktop/Job_Search_2025/ucsf_exercise/exercise_data/part2/example_fasta --outDIR /Users/shodanbeats/Desktop/Job_Search_2025/ucsf_exercise/exercise_data/part2/results -profile docker --genome /Users/shodanbeats/Desktop/Job_Search_2025/ucsf_exercise/exercise_data/part2/example.fasta --target v4 --sequencer miseq --pools D1.1,R1.2,R2.1
+Feb-24 14:13:22.557 [main] DEBUG nextflow.cli.CmdRun - N E X T F L O W  ~  version 24.10.4
+Feb-24 14:13:22.580 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/Users/shodanbeats/.nextflow/plugins; core-plugins: nf-amazon@2.9.2,nf-azure@1.10.2,nf-cloudcache@0.4.2,nf-codecommit@0.2.2,nf-console@1.1.4,nf-google@1.15.3,nf-tower@1.9.3,nf-wave@1.7.4
+Feb-24 14:13:22.597 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Feb-24 14:13:22.598 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Feb-24 14:13:22.600 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.12.0 in 'deployment' mode
+Feb-24 14:13:22.610 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Feb-24 14:13:22.631 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /Users/shodanbeats/Desktop/Job_Search_2025/ucsf_exercise/exercise_data/part2/mad4hatter/nextflow.config
+Feb-24 14:13:22.633 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /Users/shodanbeats/Desktop/Job_Search_2025/ucsf_exercise/exercise_data/part2/mad4hatter/nextflow.config
+Feb-24 14:13:22.654 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /Users/shodanbeats/.nextflow/secrets/store.json
+Feb-24 14:13:22.656 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@4c03a37] - activable => nextflow.secret.LocalSecretsProvider@4c03a37
+Feb-24 14:13:22.666 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `docker`
+Feb-24 14:13:23.312 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [sge, slurm, mamba, apptainer, conda, docker]
+Feb-24 14:13:23.342 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 from script declaration
+Feb-24 14:13:23.356 [main] DEBUG nextflow.cli.CmdRun - Launching `main.nf` [extravagant_kimura] DSL2 - revision: be188adb25
+Feb-24 14:13:23.358 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Feb-24 14:13:23.358 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+Feb-24 14:13:23.409 [main] DEBUG nextflow.Session - Session UUID: 3754f4e9-853c-4960-9865-9cd78a34b36a
+Feb-24 14:13:23.410 [main] DEBUG nextflow.Session - Run name: extravagant_kimura
+Feb-24 14:13:23.410 [main] DEBUG nextflow.Session - Executor pool size: 10
+Feb-24 14:13:23.418 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Feb-24 14:13:23.422 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=30; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
+Feb-24 14:13:23.456 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 24.10.4 build 5934
+  Created: 20-01-2025 16:47 UTC (10:47 CDT)
+  System: Mac OS X 15.0.1
+  Runtime: Groovy 4.0.23 on OpenJDK 64-Bit Server VM 11.0.13+7-b1751.21
+  Encoding: UTF-8 (UTF-8)
+  Process: 14864@Dakotas-MacBook-Pro.local [127.0.0.1]
+  CPUs: 10 - Mem: 32 GB (355.9 MB) - Swap: 0 (0)
+Feb-24 14:13:23.470 [main] DEBUG nextflow.Session - Work-dir: /Users/shodanbeats/Desktop/Job_Search_2025/ucsf_exercise/exercise_data/part2/mad4hatter/work [Mac OS X]
+Feb-24 14:13:23.491 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Feb-24 14:13:23.499 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Feb-24 14:13:23.523 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Feb-24 14:13:23.535 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 11; maxThreads: 1000
+Feb-24 14:13:23.606 [main] DEBUG nextflow.Session - Session start
+Feb-24 14:13:23.853 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Feb-24 14:13:25.037 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name DEMULTIPLEX_AMPLICONS:CREATE_PRIMER_FILES
+Feb-24 14:13:25.045 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Feb-24 14:13:25.046 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-24 14:13:25.050 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Feb-24 14:13:25.054 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=10; memory=32 GB; capacity=10; pollInterval=100ms; dumpInterval=5m
+Feb-24 14:13:25.056 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
+Feb-24 14:13:25.112 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low` for process with name DEMULTIPLEX_AMPLICONS:CUTADAPT
+Feb-24 14:13:25.114 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Feb-24 14:13:25.114 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-24 14:13:25.130 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_high` matches labels `process_high` for process with name DENOISE_AMPLICONS_1:DADA2_ANALYSIS
+Feb-24 14:13:25.131 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Feb-24 14:13:25.132 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-24 14:13:25.137 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name DENOISE_AMPLICONS_2:COLLAPSE_CONCATENATED_READS
+Feb-24 14:13:25.138 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Feb-24 14:13:25.138 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-24 14:13:25.145 [main] DEBUG nextflow.Nextflow - Genome path: /Users/shodanbeats/Desktop/Job_Search_2025/ucsf_exercise/exercise_data/part2/example.fasta
+Feb-24 14:13:25.146 [main] DEBUG nextflow.Nextflow - Absolute path: /Users/shodanbeats/Desktop/Job_Search_2025/ucsf_exercise/exercise_data/part2/example.fasta
+Feb-24 14:13:25.146 [main] DEBUG nextflow.Nextflow - Does it exist? true
+Feb-24 14:13:25.149 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name DENOISE_AMPLICONS_2:PREPARE_REFERENCE_SEQUENCES:CREATE_REFERENCE_FROM_GENOMES
+Feb-24 14:13:25.150 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Feb-24 14:13:25.150 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-24 14:13:25.155 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_high` matches labels `process_high` for process with name DENOISE_AMPLICONS_2:ALIGN_TO_REFERENCE
+Feb-24 14:13:25.156 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Feb-24 14:13:25.156 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-24 14:13:25.159 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low` for process with name DENOISE_AMPLICONS_2:FILTER_ASVS
+Feb-24 14:13:25.160 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Feb-24 14:13:25.160 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-24 14:13:25.164 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name DENOISE_AMPLICONS_2:MASK_LOW_COMPLEXITY_REGIONS:MASK_REFERENCE_TANDEM_REPEATS
+Feb-24 14:13:25.166 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Feb-24 14:13:25.166 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-24 14:13:25.170 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name DENOISE_AMPLICONS_2:MASK_LOW_COMPLEXITY_REGIONS:MASK_REFERENCE_HOMOPOLYMERS
+Feb-24 14:13:25.171 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Feb-24 14:13:25.171 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-24 14:13:25.179 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name DENOISE_AMPLICONS_2:MASK_LOW_COMPLEXITY_REGIONS:MASK_SEQUENCES
+Feb-24 14:13:25.180 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Feb-24 14:13:25.180 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-24 14:13:25.183 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name DENOISE_AMPLICONS_2:BUILD_PSEUDOCIGAR
+Feb-24 14:13:25.184 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Feb-24 14:13:25.184 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-24 14:13:25.188 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name BUILD_ALLELETABLE
+Feb-24 14:13:25.189 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Feb-24 14:13:25.189 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-24 14:13:25.194 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Feb-24 14:13:25.194 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-24 14:13:25.200 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name QUALITY_CONTROL:PREPROCESS_COVERAGE
+Feb-24 14:13:25.201 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Feb-24 14:13:25.201 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-24 14:13:25.204 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name QUALITY_CONTROL:POSTPROCESS_COVERAGE
+Feb-24 14:13:25.206 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Feb-24 14:13:25.206 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-24 14:13:25.209 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low` for process with name QUALITY_CONTROL:QUALITY_REPORT
+Feb-24 14:13:25.211 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Feb-24 14:13:25.211 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-24 14:13:25.217 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name RESISTANCE_MARKER_MODULE:BUILD_RESISTANCE_TABLE
+Feb-24 14:13:25.219 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Feb-24 14:13:25.219 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-24 14:13:25.222 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: BUILD_PSEUDOCIGAR, DENOISE_AMPLICONS_2:COLLAPSE_CONCATENATED_READS, QUALITY_CONTROL:QUALITY_REPORT, DADA2_ANALYSIS, DENOISE_AMPLICONS_2:FILTER_ASVS, DENOISE_AMPLICONS_2:MASK_LOW_COMPLEXITY_REGIONS:MASK_REFERENCE_HOMOPOLYMERS, DENOISE_AMPLICONS_2:BUILD_PSEUDOCIGAR, DENOISE_AMPLICONS_1:DADA2_ANALYSIS, MASK_REFERENCE_TANDEM_REPEATS, DENOISE_AMPLICONS_2:MASK_LOW_COMPLEXITY_REGIONS:MASK_REFERENCE_TANDEM_REPEATS, DEMULTIPLEX_AMPLICONS:CUTADAPT, CUTADAPT, POSTPROCESS_COVERAGE, DENOISE_AMPLICONS_2:ALIGN_TO_REFERENCE, CREATE_PRIMER_FILES, FILTER_ASVS, BUILD_ALLELETABLE, MASK_SEQUENCES, CALCULATE_ALLELE_FREQUENCIES, CREATE_REFERENCE_FROM_GENOMES, BUILD_RESISTANCE_TABLE, RESISTANCE_MARKER_MODULE:BUILD_RESISTANCE_TABLE, PREPROCESS_COVERAGE, QUALITY_CONTROL:PREPROCESS_COVERAGE, DENOISE_AMPLICONS_2:PREPARE_REFERENCE_SEQUENCES:CREATE_REFERENCE_FROM_GENOMES, DEMULTIPLEX_AMPLICONS:CREATE_PRIMER_FILES, MASK_REFERENCE_HOMOPOLYMERS, COLLAPSE_CONCATENATED_READS, ALIGN_TO_REFERENCE, DENOISE_AMPLICONS_2:MASK_LOW_COMPLEXITY_REGIONS:MASK_SEQUENCES, QUALITY_CONTROL:POSTPROCESS_COVERAGE, QUALITY_REPORT
+Feb-24 14:13:25.222 [main] DEBUG nextflow.Session - Igniting dataflow network (21)
+Feb-24 14:13:25.232 [PathVisitor-1] DEBUG nextflow.file.PathVisitor - files for syntax: glob; folder: /Users/shodanbeats/Desktop/Job_Search_2025/ucsf_exercise/exercise_data/part2/example_fasta/; pattern: *_R{1,2}*.fastq.gz; options: [checkIfExists:true]
+Feb-24 14:13:25.232 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > DEMULTIPLEX_AMPLICONS:CREATE_PRIMER_FILES
+Feb-24 14:13:25.237 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > DEMULTIPLEX_AMPLICONS:CUTADAPT
+Feb-24 14:13:25.237 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > DENOISE_AMPLICONS_1:DADA2_ANALYSIS
+Feb-24 14:13:25.238 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > DENOISE_AMPLICONS_2:COLLAPSE_CONCATENATED_READS
+Feb-24 14:13:25.241 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > DENOISE_AMPLICONS_2:PREPARE_REFERENCE_SEQUENCES:CREATE_REFERENCE_FROM_GENOMES
+Feb-24 14:13:25.241 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > DENOISE_AMPLICONS_2:ALIGN_TO_REFERENCE
+Feb-24 14:13:25.242 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > DENOISE_AMPLICONS_2:FILTER_ASVS
+Feb-24 14:13:25.243 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > DENOISE_AMPLICONS_2:MASK_LOW_COMPLEXITY_REGIONS:MASK_REFERENCE_TANDEM_REPEATS
+Feb-24 14:13:25.244 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > DENOISE_AMPLICONS_2:MASK_LOW_COMPLEXITY_REGIONS:MASK_REFERENCE_HOMOPOLYMERS
+Feb-24 14:13:25.245 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > DENOISE_AMPLICONS_2:MASK_LOW_COMPLEXITY_REGIONS:MASK_SEQUENCES
+Feb-24 14:13:25.245 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > DENOISE_AMPLICONS_2:BUILD_PSEUDOCIGAR
+Feb-24 14:13:25.246 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > BUILD_ALLELETABLE
+Feb-24 14:13:25.246 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > CALCULATE_ALLELE_FREQUENCIES
+Feb-24 14:13:25.247 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > QUALITY_CONTROL:PREPROCESS_COVERAGE
+Feb-24 14:13:25.247 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > QUALITY_CONTROL:POSTPROCESS_COVERAGE
+Feb-24 14:13:25.248 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > QUALITY_CONTROL:QUALITY_REPORT
+Feb-24 14:13:25.248 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > RESISTANCE_MARKER_MODULE:BUILD_RESISTANCE_TABLE
+Feb-24 14:13:25.250 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  Script_cb642932e6ea7170: /Users/shodanbeats/Desktop/Job_Search_2025/ucsf_exercise/exercise_data/part2/mad4hatter/./workflows/../modules/local/dada2_analysis.nf
+  Script_6d72a7b7b6515cf1: /Users/shodanbeats/Desktop/Job_Search_2025/ucsf_exercise/exercise_data/part2/mad4hatter/./workflows/./../subworkflows/local/prepare_reference_sequences.nf
+  Script_8ce1dd294be03e66: /Users/shodanbeats/Desktop/Job_Search_2025/ucsf_exercise/exercise_data/part2/mad4hatter/./workflows/../modules/local/build_alleletable.nf
+  Script_0939489d2b60dccb: /Users/shodanbeats/Desktop/Job_Search_2025/ucsf_exercise/exercise_data/part2/mad4hatter/main.nf
+  Script_03518da3e9a17ad6: /Users/shodanbeats/Desktop/Job_Search_2025/ucsf_exercise/exercise_data/part2/mad4hatter/./workflows/denoise_amplicons_1.nf
+  Script_2969b5581bcce291: /Users/shodanbeats/Desktop/Job_Search_2025/ucsf_exercise/exercise_data/part2/mad4hatter/./workflows/./../modules/local/filter_asvs.nf
+  Script_7c0cf1285338ed83: /Users/shodanbeats/Desktop/Job_Search_2025/ucsf_exercise/exercise_data/part2/mad4hatter/./workflows/./../modules/local/build_pseudocigar.nf
+  Script_29f04e7eaee8085f: /Users/shodanbeats/Desktop/Job_Search_2025/ucsf_exercise/exercise_data/part2/mad4hatter/./workflows/postproc_only.nf
+  Script_33628284a5dee773: /Users/shodanbeats/Desktop/Job_Search_2025/ucsf_exercise/exercise_data/part2/mad4hatter/./workflows/./../subworkflows/local/../../modules/local/mask_sequences.nf
+  Script_0ba40c67984f7d85: /Users/shodanbeats/Desktop/Job_Search_2025/ucsf_exercise/exercise_data/part2/mad4hatter/./workflows/demultiplex_amplicons.nf
+  Script_27824ec3e8f092f4: /Users/shodanbeats/Desktop/Job_Search_2025/ucsf_exercise/exercise_data/part2/mad4hatter/./workflows/resistance_marker_module.nf
+  Script_ff3c393189ddf258: /Users/shodanbeats/Desktop/Job_Search_2025/ucsf_exercise/exercise_data/part2/mad4hatter/./workflows/./../modules/local/quality_report.nf
+  Script_710d202fefaa7ce7: /Users/shodanbeats/Desktop/Job_Search_2025/ucsf_exercise/exercise_data/part2/mad4hatter/./workflows/../subworkflows/local/../../modules/local/mask_reference_tandem_repeats.nf
+  Script_06f97765e524e282: /Users/shodanbeats/Desktop/Job_Search_2025/ucsf_exercise/exercise_data/part2/mad4hatter/./workflows/quality_control.nf
+  Script_aca5639d6a0ba60c: /Users/shodanbeats/Desktop/Job_Search_2025/ucsf_exercise/exercise_data/part2/mad4hatter/./workflows/../modules/local/cutadapt.nf
+  Script_4dffc9c11609bb4e: /Users/shodanbeats/Desktop/Job_Search_2025/ucsf_exercise/exercise_data/part2/mad4hatter/./workflows/qc_only.nf
+  Script_eadc7452433ae746: /Users/shodanbeats/Desktop/Job_Search_2025/ucsf_exercise/exercise_data/part2/mad4hatter/./workflows/../modules/local/align_to_reference.nf
+  Script_7344ed897bb23252: /Users/shodanbeats/Desktop/Job_Search_2025/ucsf_exercise/exercise_data/part2/mad4hatter/./workflows/../subworkflows/local/../../modules/local/create_reference_from_genomes.nf
+  Script_5a0f4f29626f5e5f: /Users/shodanbeats/Desktop/Job_Search_2025/ucsf_exercise/exercise_data/part2/mad4hatter/./workflows/../modules/local/preprocess_coverage.nf
+  Script_388d718c60be4f5f: /Users/shodanbeats/Desktop/Job_Search_2025/ucsf_exercise/exercise_data/part2/mad4hatter/./workflows/./denoise_amplicons_2.nf
+  Script_b56963eb9675bd16: /Users/shodanbeats/Desktop/Job_Search_2025/ucsf_exercise/exercise_data/part2/mad4hatter/./workflows/../modules/local/postprocess_coverage.nf
+  Script_91165cbe55fed00d: /Users/shodanbeats/Desktop/Job_Search_2025/ucsf_exercise/exercise_data/part2/mad4hatter/./modules/local/calculate_allele_frequencies.nf
+  Script_aa828b5b445e44ac: /Users/shodanbeats/Desktop/Job_Search_2025/ucsf_exercise/exercise_data/part2/mad4hatter/./workflows/./../modules/local/create_primer_files.nf
+  Script_4813cfae75d216b6: /Users/shodanbeats/Desktop/Job_Search_2025/ucsf_exercise/exercise_data/part2/mad4hatter/./workflows/../modules/local/collapse_concatenated_reads.nf
+  Script_0269039a11a06472: /Users/shodanbeats/Desktop/Job_Search_2025/ucsf_exercise/exercise_data/part2/mad4hatter/./workflows/../modules/local/build_resistance_table.nf
+  Script_6c7371f6255e5d72: /Users/shodanbeats/Desktop/Job_Search_2025/ucsf_exercise/exercise_data/part2/mad4hatter/./workflows/./../subworkflows/local/../../modules/local/mask_reference_homopolymers.nf
+  Script_9a629f0bae10fac8: /Users/shodanbeats/Desktop/Job_Search_2025/ucsf_exercise/exercise_data/part2/mad4hatter/./workflows/../subworkflows/local/mask_low_complexity_regions.nf
+Feb-24 14:13:25.251 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
+Feb-24 14:13:25.251 [main] DEBUG nextflow.Session - Session await
+Feb-24 14:13:25.386 [Task submitter] WARN  nextflow.container.DockerBuilder - Undocumented setting `docker.userEmulation` is not supported any more - please remove it from your config
+Feb-24 14:13:25.405 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-24 14:13:25.407 [Task submitter] INFO  nextflow.Session - [4c/220544] Submitted process > DENOISE_AMPLICONS_2:PREPARE_REFERENCE_SEQUENCES:CREATE_REFERENCE_FROM_GENOMES (1)
+Feb-24 14:13:25.412 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-24 14:13:25.412 [Task submitter] INFO  nextflow.Session - [b8/ba03eb] Submitted process > DEMULTIPLEX_AMPLICONS:CREATE_PRIMER_FILES
+Feb-24 14:13:28.946 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: DEMULTIPLEX_AMPLICONS:CREATE_PRIMER_FILES; status: COMPLETED; exit: 0; error: -; workDir: /Users/shodanbeats/Desktop/Job_Search_2025/ucsf_exercise/exercise_data/part2/mad4hatter/work/b8/ba03eb769d5202d2243c2da327508e]
+Feb-24 14:13:28.947 [Task monitor] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'TaskFinalizer' minSize=10; maxSize=30; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
+Feb-24 14:13:28.976 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-24 14:13:28.976 [Task submitter] INFO  nextflow.Session - [64/e803f0] Submitted process > DEMULTIPLEX_AMPLICONS:CUTADAPT (7S1-10K-parasitedensity-0p25x-primerconcentration-allpools-ENV-PV4-replicate1_S1_L001)
+Feb-24 14:13:45.635 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 2; name: DENOISE_AMPLICONS_2:PREPARE_REFERENCE_SEQUENCES:CREATE_REFERENCE_FROM_GENOMES (1); status: COMPLETED; exit: 0; error: -; workDir: /Users/shodanbeats/Desktop/Job_Search_2025/ucsf_exercise/exercise_data/part2/mad4hatter/work/4c/22054407e363a99d407627971c5b27]
+Feb-24 14:13:45.648 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-24 14:13:45.648 [Task submitter] INFO  nextflow.Session - [6b/b92530] Submitted process > DENOISE_AMPLICONS_2:MASK_LOW_COMPLEXITY_REGIONS:MASK_REFERENCE_HOMOPOLYMERS (1)
+Feb-24 14:13:45.652 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-24 14:13:45.652 [Task submitter] INFO  nextflow.Session - [6b/ad4d75] Submitted process > DENOISE_AMPLICONS_2:MASK_LOW_COMPLEXITY_REGIONS:MASK_REFERENCE_TANDEM_REPEATS (1)
+Feb-24 14:13:47.098 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 4; name: DENOISE_AMPLICONS_2:MASK_LOW_COMPLEXITY_REGIONS:MASK_REFERENCE_TANDEM_REPEATS (1); status: COMPLETED; exit: 0; error: -; workDir: /Users/shodanbeats/Desktop/Job_Search_2025/ucsf_exercise/exercise_data/part2/mad4hatter/work/6b/ad4d7590fcdbda197a3993af33b14f]
+Feb-24 14:14:03.174 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 5; name: DENOISE_AMPLICONS_2:MASK_LOW_COMPLEXITY_REGIONS:MASK_REFERENCE_HOMOPOLYMERS (1); status: COMPLETED; exit: 0; error: -; workDir: /Users/shodanbeats/Desktop/Job_Search_2025/ucsf_exercise/exercise_data/part2/mad4hatter/work/6b/b92530986c8814b4d88ad5dfa721d2]
+Feb-24 14:14:07.422 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 3; name: DEMULTIPLEX_AMPLICONS:CUTADAPT (7S1-10K-parasitedensity-0p25x-primerconcentration-allpools-ENV-PV4-replicate1_S1_L001); status: COMPLETED; exit: 0; error: -; workDir: /Users/shodanbeats/Desktop/Job_Search_2025/ucsf_exercise/exercise_data/part2/mad4hatter/work/64/e803f0a9507421d83f8599f959b59d]
+Feb-24 14:14:07.444 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-24 14:14:07.445 [Task submitter] INFO  nextflow.Session - [d0/83ead4] Submitted process > QUALITY_CONTROL:PREPROCESS_COVERAGE
+Feb-24 14:14:07.459 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-24 14:14:07.459 [Task submitter] INFO  nextflow.Session - [76/b45578] Submitted process > DENOISE_AMPLICONS_1:DADA2_ANALYSIS
+Feb-24 14:14:08.405 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 7; name: QUALITY_CONTROL:PREPROCESS_COVERAGE; status: COMPLETED; exit: 0; error: -; workDir: /Users/shodanbeats/Desktop/Job_Search_2025/ucsf_exercise/exercise_data/part2/mad4hatter/work/d0/83ead494ab615069336fdbaf4f0fa8]
+Feb-24 14:15:42.427 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 6; name: DENOISE_AMPLICONS_1:DADA2_ANALYSIS; status: COMPLETED; exit: 0; error: -; workDir: /Users/shodanbeats/Desktop/Job_Search_2025/ucsf_exercise/exercise_data/part2/mad4hatter/work/76/b45578aed9e2cc10e3c1a1076db865]
+Feb-24 14:15:42.452 [Task submitter] WARN  nextflow.container.DockerBuilder - Undocumented setting `docker.userEmulation` is not supported any more - please remove it from your config
+Feb-24 14:15:42.453 [TaskFinalizer-7] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'PublishDir' minSize=10; maxSize=30; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
+Feb-24 14:15:42.455 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-24 14:15:42.457 [Task submitter] INFO  nextflow.Session - [c9/eb8c03] Submitted process > DENOISE_AMPLICONS_2:COLLAPSE_CONCATENATED_READS
+Feb-24 14:15:48.149 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 8; name: DENOISE_AMPLICONS_2:COLLAPSE_CONCATENATED_READS; status: COMPLETED; exit: 0; error: -; workDir: /Users/shodanbeats/Desktop/Job_Search_2025/ucsf_exercise/exercise_data/part2/mad4hatter/work/c9/eb8c035aed4287bc5c7cc2515b04d9]
+Feb-24 14:15:48.175 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-24 14:15:48.175 [Task submitter] INFO  nextflow.Session - [1b/8d2f67] Submitted process > DENOISE_AMPLICONS_2:ALIGN_TO_REFERENCE (1)
+Feb-24 14:16:05.747 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 9; name: DENOISE_AMPLICONS_2:ALIGN_TO_REFERENCE (1); status: COMPLETED; exit: 0; error: -; workDir: /Users/shodanbeats/Desktop/Job_Search_2025/ucsf_exercise/exercise_data/part2/mad4hatter/work/1b/8d2f67a4bcfd870bcf3bf1300fb7f5]
+Feb-24 14:16:05.774 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-24 14:16:05.775 [Task submitter] INFO  nextflow.Session - [af/55c44c] Submitted process > DENOISE_AMPLICONS_2:FILTER_ASVS (1)
+Feb-24 14:16:06.486 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 10; name: DENOISE_AMPLICONS_2:FILTER_ASVS (1); status: COMPLETED; exit: 0; error: -; workDir: /Users/shodanbeats/Desktop/Job_Search_2025/ucsf_exercise/exercise_data/part2/mad4hatter/work/af/55c44c4a91a584441c32c6e274fbfc]
+Feb-24 14:16:06.506 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-24 14:16:06.506 [Task submitter] INFO  nextflow.Session - [42/d9ae4e] Submitted process > DENOISE_AMPLICONS_2:MASK_LOW_COMPLEXITY_REGIONS:MASK_SEQUENCES (1)
+Feb-24 14:16:14.921 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 11; name: DENOISE_AMPLICONS_2:MASK_LOW_COMPLEXITY_REGIONS:MASK_SEQUENCES (1); status: COMPLETED; exit: 0; error: -; workDir: /Users/shodanbeats/Desktop/Job_Search_2025/ucsf_exercise/exercise_data/part2/mad4hatter/work/42/d9ae4e2f7425ed4621783b9bd6b77f]
+Feb-24 14:16:14.946 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-24 14:16:14.946 [Task submitter] INFO  nextflow.Session - [77/4eeee6] Submitted process > DENOISE_AMPLICONS_2:BUILD_PSEUDOCIGAR (1)
+Feb-24 14:16:21.720 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 12; name: DENOISE_AMPLICONS_2:BUILD_PSEUDOCIGAR (1); status: COMPLETED; exit: 0; error: -; workDir: /Users/shodanbeats/Desktop/Job_Search_2025/ucsf_exercise/exercise_data/part2/mad4hatter/work/77/4eeee638e102a45bb070c4ffbd9b7f]
+Feb-24 14:16:21.745 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-24 14:16:21.746 [Task submitter] INFO  nextflow.Session - [55/4d141a] Submitted process > BUILD_ALLELETABLE (1)
+Feb-24 14:16:27.216 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 13; name: BUILD_ALLELETABLE (1); status: COMPLETED; exit: 0; error: -; workDir: /Users/shodanbeats/Desktop/Job_Search_2025/ucsf_exercise/exercise_data/part2/mad4hatter/work/55/4d141a0b259beb4ed1bbbce797d7d2]
+Feb-24 14:16:27.237 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-24 14:16:27.237 [Task submitter] INFO  nextflow.Session - [9d/664fa0] Submitted process > QUALITY_CONTROL:POSTPROCESS_COVERAGE (1)
+Feb-24 14:16:27.239 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-24 14:16:27.239 [Task submitter] INFO  nextflow.Session - [3b/e4a7ee] Submitted process > CALCULATE_ALLELE_FREQUENCIES (Calculating allele frequencies)
+Feb-24 14:16:27.243 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-24 14:16:27.244 [Task submitter] INFO  nextflow.Session - [e7/ad0f0e] Submitted process > RESISTANCE_MARKER_MODULE:BUILD_RESISTANCE_TABLE (1)
+Feb-24 14:16:29.073 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 15; name: CALCULATE_ALLELE_FREQUENCIES (Calculating allele frequencies); status: COMPLETED; exit: 0; error: -; workDir: /Users/shodanbeats/Desktop/Job_Search_2025/ucsf_exercise/exercise_data/part2/mad4hatter/work/3b/e4a7ee270bdea180552b737538443a]
+Feb-24 14:16:29.343 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 16; name: RESISTANCE_MARKER_MODULE:BUILD_RESISTANCE_TABLE (1); status: COMPLETED; exit: 0; error: -; workDir: /Users/shodanbeats/Desktop/Job_Search_2025/ucsf_exercise/exercise_data/part2/mad4hatter/work/e7/ad0f0e15f74f16c31d9f91b0986d69]
+Feb-24 14:16:33.356 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 14; name: QUALITY_CONTROL:POSTPROCESS_COVERAGE (1); status: COMPLETED; exit: 0; error: -; workDir: /Users/shodanbeats/Desktop/Job_Search_2025/ucsf_exercise/exercise_data/part2/mad4hatter/work/9d/664fa0a33fb372e0a27c688dbfad37]
+Feb-24 14:16:33.390 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-24 14:16:33.390 [Task submitter] INFO  nextflow.Session - [1c/168033] Submitted process > QUALITY_CONTROL:QUALITY_REPORT (1)
+Feb-24 14:16:39.710 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 17; name: QUALITY_CONTROL:QUALITY_REPORT (1); status: COMPLETED; exit: 0; error: -; workDir: /Users/shodanbeats/Desktop/Job_Search_2025/ucsf_exercise/exercise_data/part2/mad4hatter/work/1c/168033db1f7754885d96adff08e6bb]
+Feb-24 14:16:39.730 [main] DEBUG nextflow.Session - Session await > all processes finished
+Feb-24 14:16:39.823 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local) - terminating tasks monitor poll loop
+Feb-24 14:16:39.824 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Feb-24 14:16:39.838 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'TaskFinalizer' shutdown completed (hard=false)
+Feb-24 14:16:39.839 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'PublishDir' shutdown completed (hard=false)
+Feb-24 14:16:39.866 [main] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=17; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=16m 50s; failedDuration=0ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=3; peakCpus=7; peakMemory=18 GB; ]
+Feb-24 14:16:39.902 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
+Feb-24 14:16:39.925 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'FileTransfer' shutdown completed (hard=false)
+Feb-24 14:16:39.925 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

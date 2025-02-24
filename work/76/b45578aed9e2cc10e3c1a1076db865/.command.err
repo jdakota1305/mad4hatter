@@ -1,0 +1,293 @@
+WARNING: The requested image's platform (linux/amd64) does not match the detected host platform (linux/arm64/v8) and no specific platform was requested
+── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.1.4     ✔ readr     2.1.5
+✔ forcats   1.0.0     ✔ stringr   1.5.1
+✔ ggplot2   3.5.1     ✔ tibble    3.2.1
+✔ lubridate 1.9.4     ✔ tidyr     1.3.1
+✔ purrr     1.0.4     
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+ℹ Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors
+Loading required package: Rcpp
+Creating output directory: demultiplexed_fastqs1/filtered
+The filter removed all reads: demultiplexed_fastqs1/filtered/Pf3D7_01_v3-145388-145662-1A_7S1-10K-parasitedensity-0p25x-primerconcentration-allpools-ENV-PV4-replicate1_S1_L001_trimmed_F_filt.fastq.gz and demultiplexed_fastqs1/filtered/Pf3D7_01_v3-145388-145662-1A_7S1-10K-parasitedensity-0p25x-primerconcentration-allpools-ENV-PV4-replicate1_S1_L001_trimmed_R_filt.fastq.gz not written.
+The filter removed all reads: demultiplexed_fastqs1/filtered/Pf3D7_01_v3-535965-536239-1A_7S1-10K-parasitedensity-0p25x-primerconcentration-allpools-ENV-PV4-replicate1_S1_L001_trimmed_F_filt.fastq.gz and demultiplexed_fastqs1/filtered/Pf3D7_01_v3-535965-536239-1A_7S1-10K-parasitedensity-0p25x-primerconcentration-allpools-ENV-PV4-replicate1_S1_L001_trimmed_R_filt.fastq.gz not written.
+The filter removed all reads: demultiplexed_fastqs1/filtered/Pf3D7_04_v3-1082776-1083049-1B_7S1-10K-parasitedensity-0p25x-primerconcentration-allpools-ENV-PV4-replicate1_S1_L001_trimmed_F_filt.fastq.gz and demultiplexed_fastqs1/filtered/Pf3D7_04_v3-1082776-1083049-1B_7S1-10K-parasitedensity-0p25x-primerconcentration-allpools-ENV-PV4-replicate1_S1_L001_trimmed_R_filt.fastq.gz not written.
+The filter removed all reads: demultiplexed_fastqs1/filtered/Pf3D7_07_v3-405570-405844-1B_7S1-10K-parasitedensity-0p25x-primerconcentration-allpools-ENV-PV4-replicate1_S1_L001_trimmed_F_filt.fastq.gz and demultiplexed_fastqs1/filtered/Pf3D7_07_v3-405570-405844-1B_7S1-10K-parasitedensity-0p25x-primerconcentration-allpools-ENV-PV4-replicate1_S1_L001_trimmed_R_filt.fastq.gz not written.
+The filter removed all reads: demultiplexed_fastqs1/filtered/Pf3D7_07_v3-404325-404590-1B_7S1-10K-parasitedensity-0p25x-primerconcentration-allpools-ENV-PV4-replicate1_S1_L001_trimmed_F_filt.fastq.gz and demultiplexed_fastqs1/filtered/Pf3D7_07_v3-404325-404590-1B_7S1-10K-parasitedensity-0p25x-primerconcentration-allpools-ENV-PV4-replicate1_S1_L001_trimmed_R_filt.fastq.gz not written.
+The filter removed all reads: demultiplexed_fastqs1/filtered/Pf3D7_07_v3-627351-627625-1A_7S1-10K-parasitedensity-0p25x-primerconcentration-allpools-ENV-PV4-replicate1_S1_L001_trimmed_F_filt.fastq.gz and demultiplexed_fastqs1/filtered/Pf3D7_07_v3-627351-627625-1A_7S1-10K-parasitedensity-0p25x-primerconcentration-allpools-ENV-PV4-replicate1_S1_L001_trimmed_R_filt.fastq.gz not written.
+The filter removed all reads: demultiplexed_fastqs1/filtered/Pf3D7_08_v3-1375025-1375284-1B_7S1-10K-parasitedensity-0p25x-primerconcentration-allpools-ENV-PV4-replicate1_S1_L001_trimmed_F_filt.fastq.gz and demultiplexed_fastqs1/filtered/Pf3D7_08_v3-1375025-1375284-1B_7S1-10K-parasitedensity-0p25x-primerconcentration-allpools-ENV-PV4-replicate1_S1_L001_trimmed_R_filt.fastq.gz not written.
+The filter removed all reads: demultiplexed_fastqs1/filtered/Pf3D7_09_v3-685560-685825-1A_7S1-10K-parasitedensity-0p25x-primerconcentration-allpools-ENV-PV4-replicate1_S1_L001_trimmed_F_filt.fastq.gz and demultiplexed_fastqs1/filtered/Pf3D7_09_v3-685560-685825-1A_7S1-10K-parasitedensity-0p25x-primerconcentration-allpools-ENV-PV4-replicate1_S1_L001_trimmed_R_filt.fastq.gz not written.
+The filter removed all reads: demultiplexed_fastqs1/filtered/Pf3D7_10_v3-490605-490877-1B_7S1-10K-parasitedensity-0p25x-primerconcentration-allpools-ENV-PV4-replicate1_S1_L001_trimmed_F_filt.fastq.gz and demultiplexed_fastqs1/filtered/Pf3D7_10_v3-490605-490877-1B_7S1-10K-parasitedensity-0p25x-primerconcentration-allpools-ENV-PV4-replicate1_S1_L001_trimmed_R_filt.fastq.gz not written.
+The filter removed all reads: demultiplexed_fastqs1/filtered/Pf3D7_10_v3-992596-992869-1A_7S1-10K-parasitedensity-0p25x-primerconcentration-allpools-ENV-PV4-replicate1_S1_L001_trimmed_F_filt.fastq.gz and demultiplexed_fastqs1/filtered/Pf3D7_10_v3-992596-992869-1A_7S1-10K-parasitedensity-0p25x-primerconcentration-allpools-ENV-PV4-replicate1_S1_L001_trimmed_R_filt.fastq.gz not written.
+The filter removed all reads: demultiplexed_fastqs1/filtered/Pf3D7_09_v3-516735-517007-1A_7S1-10K-parasitedensity-0p25x-primerconcentration-allpools-ENV-PV4-replicate1_S1_L001_trimmed_F_filt.fastq.gz and demultiplexed_fastqs1/filtered/Pf3D7_09_v3-516735-517007-1A_7S1-10K-parasitedensity-0p25x-primerconcentration-allpools-ENV-PV4-replicate1_S1_L001_trimmed_R_filt.fastq.gz not written.
+The filter removed all reads: demultiplexed_fastqs1/filtered/Pf3D7_11_v3-1019050-1019319-1A_7S1-10K-parasitedensity-0p25x-primerconcentration-allpools-ENV-PV4-replicate1_S1_L001_trimmed_F_filt.fastq.gz and demultiplexed_fastqs1/filtered/Pf3D7_11_v3-1019050-1019319-1A_7S1-10K-parasitedensity-0p25x-primerconcentration-allpools-ENV-PV4-replicate1_S1_L001_trimmed_R_filt.fastq.gz not written.
+The filter removed all reads: demultiplexed_fastqs1/filtered/Pf3D7_11_v3-1934962-1935236-1A_7S1-10K-parasitedensity-0p25x-primerconcentration-allpools-ENV-PV4-replicate1_S1_L001_trimmed_F_filt.fastq.gz and demultiplexed_fastqs1/filtered/Pf3D7_11_v3-1934962-1935236-1A_7S1-10K-parasitedensity-0p25x-primerconcentration-allpools-ENV-PV4-replicate1_S1_L001_trimmed_R_filt.fastq.gz not written.
+The filter removed all reads: demultiplexed_fastqs1/filtered/Pf3D7_11_v3-1294284-1294580-1B_7S1-10K-parasitedensity-0p25x-primerconcentration-allpools-ENV-PV4-replicate1_S1_L001_trimmed_F_filt.fastq.gz and demultiplexed_fastqs1/filtered/Pf3D7_11_v3-1294284-1294580-1B_7S1-10K-parasitedensity-0p25x-primerconcentration-allpools-ENV-PV4-replicate1_S1_L001_trimmed_R_filt.fastq.gz not written.
+The filter removed all reads: demultiplexed_fastqs1/filtered/Pf3D7_11_v3-2001721-2001954-1B_7S1-10K-parasitedensity-0p25x-primerconcentration-allpools-ENV-PV4-replicate1_S1_L001_trimmed_F_filt.fastq.gz and demultiplexed_fastqs1/filtered/Pf3D7_11_v3-2001721-2001954-1B_7S1-10K-parasitedensity-0p25x-primerconcentration-allpools-ENV-PV4-replicate1_S1_L001_trimmed_R_filt.fastq.gz not written.
+The filter removed all reads: demultiplexed_fastqs1/filtered/Pf3D7_11_v3-1950401-1950636-1B_7S1-10K-parasitedensity-0p25x-primerconcentration-allpools-ENV-PV4-replicate1_S1_L001_trimmed_F_filt.fastq.gz and demultiplexed_fastqs1/filtered/Pf3D7_11_v3-1950401-1950636-1B_7S1-10K-parasitedensity-0p25x-primerconcentration-allpools-ENV-PV4-replicate1_S1_L001_trimmed_R_filt.fastq.gz not written.
+The filter removed all reads: demultiplexed_fastqs1/filtered/Pf3D7_13_v3-1465010-1465307-1B_7S1-10K-parasitedensity-0p25x-primerconcentration-allpools-ENV-PV4-replicate1_S1_L001_trimmed_F_filt.fastq.gz and demultiplexed_fastqs1/filtered/Pf3D7_13_v3-1465010-1465307-1B_7S1-10K-parasitedensity-0p25x-primerconcentration-allpools-ENV-PV4-replicate1_S1_L001_trimmed_R_filt.fastq.gz not written.
+The filter removed all reads: demultiplexed_fastqs1/filtered/Pf3D7_11_v3-2001969-2002222-1B_7S1-10K-parasitedensity-0p25x-primerconcentration-allpools-ENV-PV4-replicate1_S1_L001_trimmed_F_filt.fastq.gz and demultiplexed_fastqs1/filtered/Pf3D7_11_v3-2001969-2002222-1B_7S1-10K-parasitedensity-0p25x-primerconcentration-allpools-ENV-PV4-replicate1_S1_L001_trimmed_R_filt.fastq.gz not written.
+The filter removed all reads: demultiplexed_fastqs1/filtered/Pf3D7_13_v3-1876391-1876664-1A_7S1-10K-parasitedensity-0p25x-primerconcentration-allpools-ENV-PV4-replicate1_S1_L001_trimmed_F_filt.fastq.gz and demultiplexed_fastqs1/filtered/Pf3D7_13_v3-1876391-1876664-1A_7S1-10K-parasitedensity-0p25x-primerconcentration-allpools-ENV-PV4-replicate1_S1_L001_trimmed_R_filt.fastq.gz not written.
+The filter removed all reads: demultiplexed_fastqs1/filtered/Pf3D7_13_v3-2840462-2840736-1B_7S1-10K-parasitedensity-0p25x-primerconcentration-allpools-ENV-PV4-replicate1_S1_L001_trimmed_F_filt.fastq.gz and demultiplexed_fastqs1/filtered/Pf3D7_13_v3-2840462-2840736-1B_7S1-10K-parasitedensity-0p25x-primerconcentration-allpools-ENV-PV4-replicate1_S1_L001_trimmed_R_filt.fastq.gz not written.
+The filter removed all reads: demultiplexed_fastqs1/filtered/Pf3D7_14_v3-137398-137668-1A_7S1-10K-parasitedensity-0p25x-primerconcentration-allpools-ENV-PV4-replicate1_S1_L001_trimmed_F_filt.fastq.gz and demultiplexed_fastqs1/filtered/Pf3D7_14_v3-137398-137668-1A_7S1-10K-parasitedensity-0p25x-primerconcentration-allpools-ENV-PV4-replicate1_S1_L001_trimmed_R_filt.fastq.gz not written.
+The filter removed all reads: demultiplexed_fastqs1/filtered/Pf3D7_14_v3-854128-854427-1B_7S1-10K-parasitedensity-0p25x-primerconcentration-allpools-ENV-PV4-replicate1_S1_L001_trimmed_F_filt.fastq.gz and demultiplexed_fastqs1/filtered/Pf3D7_14_v3-854128-854427-1B_7S1-10K-parasitedensity-0p25x-primerconcentration-allpools-ENV-PV4-replicate1_S1_L001_trimmed_R_filt.fastq.gz not written.
+The filter removed all reads: demultiplexed_fastqs1/filtered/PocGH01_12_v1-1106456-1106697-1AB_7S1-10K-parasitedensity-0p25x-primerconcentration-allpools-ENV-PV4-replicate1_S1_L001_trimmed_F_filt.fastq.gz and demultiplexed_fastqs1/filtered/PocGH01_12_v1-1106456-1106697-1AB_7S1-10K-parasitedensity-0p25x-primerconcentration-allpools-ENV-PV4-replicate1_S1_L001_trimmed_R_filt.fastq.gz not written.
+The filter removed all reads: demultiplexed_fastqs1/filtered/PKNH_12_v2-198869-199113-1AB_7S1-10K-parasitedensity-0p25x-primerconcentration-allpools-ENV-PV4-replicate1_S1_L001_trimmed_F_filt.fastq.gz and demultiplexed_fastqs1/filtered/PKNH_12_v2-198869-199113-1AB_7S1-10K-parasitedensity-0p25x-primerconcentration-allpools-ENV-PV4-replicate1_S1_L001_trimmed_R_filt.fastq.gz not written.
+The filter removed all reads: demultiplexed_fastqs1/filtered/PvP01_12_v1-1184983-1185208-1AB_7S1-10K-parasitedensity-0p25x-primerconcentration-allpools-ENV-PV4-replicate1_S1_L001_trimmed_F_filt.fastq.gz and demultiplexed_fastqs1/filtered/PvP01_12_v1-1184983-1185208-1AB_7S1-10K-parasitedensity-0p25x-primerconcentration-allpools-ENV-PV4-replicate1_S1_L001_trimmed_R_filt.fastq.gz not written.
+The filter removed all reads: demultiplexed_fastqs1/filtered/PmUG01_12_v1-1397996-1398245-1AB_7S1-10K-parasitedensity-0p25x-primerconcentration-allpools-ENV-PV4-replicate1_S1_L001_trimmed_F_filt.fastq.gz and demultiplexed_fastqs1/filtered/PmUG01_12_v1-1397996-1398245-1AB_7S1-10K-parasitedensity-0p25x-primerconcentration-allpools-ENV-PV4-replicate1_S1_L001_trimmed_R_filt.fastq.gz not written.
+Some input samples had no reads pass the filter.
+30 paired-reads (in 1 unique pairings) successfully merged out of 30 (in 1 pairings) input.
+53 paired-reads (in 1 unique pairings) successfully merged out of 53 (in 1 pairings) input.
+243 paired-reads (in 1 unique pairings) successfully merged out of 243 (in 1 pairings) input.
+5 paired-reads (in 1 unique pairings) successfully merged out of 5 (in 1 pairings) input.
+216 paired-reads (in 1 unique pairings) successfully merged out of 216 (in 1 pairings) input.
+95 paired-reads (in 1 unique pairings) successfully merged out of 95 (in 1 pairings) input.
+40 paired-reads (in 1 unique pairings) successfully merged out of 40 (in 1 pairings) input.
+3 paired-reads (in 1 unique pairings) successfully merged out of 3 (in 1 pairings) input.
+73 paired-reads (in 1 unique pairings) successfully merged out of 73 (in 1 pairings) input.
+137 paired-reads (in 1 unique pairings) successfully merged out of 137 (in 1 pairings) input.
+9 paired-reads (in 1 unique pairings) successfully merged out of 9 (in 1 pairings) input.
+11 paired-reads (in 1 unique pairings) successfully merged out of 11 (in 1 pairings) input.
+1143 paired-reads (in 1 unique pairings) successfully merged out of 1143 (in 1 pairings) input.
+77 paired-reads (in 1 unique pairings) successfully merged out of 77 (in 1 pairings) input.
+107 paired-reads (in 1 unique pairings) successfully merged out of 107 (in 1 pairings) input.
+69 paired-reads (in 1 unique pairings) successfully merged out of 69 (in 1 pairings) input.
+27 paired-reads (in 1 unique pairings) successfully merged out of 27 (in 1 pairings) input.
+1 paired-reads (in 1 unique pairings) successfully merged out of 1 (in 1 pairings) input.
+3 paired-reads (in 1 unique pairings) successfully merged out of 3 (in 1 pairings) input.
+61 paired-reads (in 1 unique pairings) successfully merged out of 61 (in 1 pairings) input.
+336 paired-reads (in 1 unique pairings) successfully merged out of 336 (in 1 pairings) input.
+146 paired-reads (in 1 unique pairings) successfully merged out of 146 (in 1 pairings) input.
+6 paired-reads (in 1 unique pairings) successfully merged out of 6 (in 1 pairings) input.
+163 paired-reads (in 1 unique pairings) successfully merged out of 163 (in 1 pairings) input.
+41 paired-reads (in 1 unique pairings) successfully merged out of 41 (in 1 pairings) input.
+18 paired-reads (in 1 unique pairings) successfully merged out of 18 (in 1 pairings) input.
+156 paired-reads (in 1 unique pairings) successfully merged out of 156 (in 1 pairings) input.
+85 paired-reads (in 1 unique pairings) successfully merged out of 85 (in 1 pairings) input.
+260 paired-reads (in 1 unique pairings) successfully merged out of 260 (in 1 pairings) input.
+15 paired-reads (in 1 unique pairings) successfully merged out of 15 (in 1 pairings) input.
+40 paired-reads (in 1 unique pairings) successfully merged out of 40 (in 1 pairings) input.
+145 paired-reads (in 1 unique pairings) successfully merged out of 145 (in 1 pairings) input.
+459 paired-reads (in 1 unique pairings) successfully merged out of 459 (in 1 pairings) input.
+31 paired-reads (in 1 unique pairings) successfully merged out of 31 (in 1 pairings) input.
+195 paired-reads (in 1 unique pairings) successfully merged out of 195 (in 1 pairings) input.
+251 paired-reads (in 1 unique pairings) successfully merged out of 251 (in 1 pairings) input.
+76 paired-reads (in 1 unique pairings) successfully merged out of 76 (in 1 pairings) input.
+91 paired-reads (in 1 unique pairings) successfully merged out of 91 (in 1 pairings) input.
+7 paired-reads (in 1 unique pairings) successfully merged out of 7 (in 1 pairings) input.
+1 paired-reads (in 1 unique pairings) successfully merged out of 1 (in 1 pairings) input.
+2 paired-reads (in 1 unique pairings) successfully merged out of 2 (in 1 pairings) input.
+37 paired-reads (in 1 unique pairings) successfully merged out of 37 (in 1 pairings) input.
+137 paired-reads (in 1 unique pairings) successfully merged out of 137 (in 1 pairings) input.
+704 paired-reads (in 1 unique pairings) successfully merged out of 704 (in 1 pairings) input.
+172 paired-reads (in 1 unique pairings) successfully merged out of 172 (in 1 pairings) input.
+44 paired-reads (in 1 unique pairings) successfully merged out of 44 (in 1 pairings) input.
+21 paired-reads (in 1 unique pairings) successfully merged out of 21 (in 1 pairings) input.
+186 paired-reads (in 1 unique pairings) successfully merged out of 186 (in 1 pairings) input.
+27 paired-reads (in 1 unique pairings) successfully merged out of 27 (in 1 pairings) input.
+5 paired-reads (in 1 unique pairings) successfully merged out of 5 (in 1 pairings) input.
+59 paired-reads (in 1 unique pairings) successfully merged out of 59 (in 1 pairings) input.
+13 paired-reads (in 1 unique pairings) successfully merged out of 13 (in 1 pairings) input.
+1 paired-reads (in 1 unique pairings) successfully merged out of 1 (in 1 pairings) input.
+89 paired-reads (in 1 unique pairings) successfully merged out of 89 (in 1 pairings) input.
+48 paired-reads (in 1 unique pairings) successfully merged out of 48 (in 1 pairings) input.
+3 paired-reads (in 1 unique pairings) successfully merged out of 3 (in 1 pairings) input.
+129 paired-reads (in 1 unique pairings) successfully merged out of 129 (in 1 pairings) input.
+166 paired-reads (in 1 unique pairings) successfully merged out of 166 (in 1 pairings) input.
+8 paired-reads (in 1 unique pairings) successfully merged out of 8 (in 1 pairings) input.
+97 paired-reads (in 1 unique pairings) successfully merged out of 97 (in 1 pairings) input.
+5 paired-reads (in 1 unique pairings) successfully merged out of 5 (in 1 pairings) input.
+171 paired-reads (in 1 unique pairings) successfully merged out of 171 (in 1 pairings) input.
+22 paired-reads (in 1 unique pairings) successfully merged out of 22 (in 1 pairings) input.
+6 paired-reads (in 1 unique pairings) successfully merged out of 6 (in 1 pairings) input.
+3 paired-reads (in 1 unique pairings) successfully merged out of 3 (in 1 pairings) input.
+61 paired-reads (in 1 unique pairings) successfully merged out of 61 (in 1 pairings) input.
+5 paired-reads (in 1 unique pairings) successfully merged out of 5 (in 1 pairings) input.
+38 paired-reads (in 1 unique pairings) successfully merged out of 38 (in 1 pairings) input.
+4 paired-reads (in 1 unique pairings) successfully merged out of 4 (in 1 pairings) input.
+27 paired-reads (in 1 unique pairings) successfully merged out of 27 (in 1 pairings) input.
+2 paired-reads (in 1 unique pairings) successfully merged out of 2 (in 1 pairings) input.
+1 paired-reads (in 1 unique pairings) successfully merged out of 1 (in 1 pairings) input.
+132 paired-reads (in 1 unique pairings) successfully merged out of 132 (in 1 pairings) input.
+113 paired-reads (in 1 unique pairings) successfully merged out of 113 (in 1 pairings) input.
+19 paired-reads (in 1 unique pairings) successfully merged out of 19 (in 1 pairings) input.
+437 paired-reads (in 2 unique pairings) successfully merged out of 437 (in 2 pairings) input.
+Duplicate sequences in merged output.
+2 paired-reads (in 1 unique pairings) successfully merged out of 2 (in 1 pairings) input.
+2 paired-reads (in 1 unique pairings) successfully merged out of 2 (in 1 pairings) input.
+116 paired-reads (in 1 unique pairings) successfully merged out of 116 (in 1 pairings) input.
+3 paired-reads (in 1 unique pairings) successfully merged out of 3 (in 1 pairings) input.
+93 paired-reads (in 1 unique pairings) successfully merged out of 93 (in 1 pairings) input.
+110 paired-reads (in 1 unique pairings) successfully merged out of 110 (in 1 pairings) input.
+70 paired-reads (in 1 unique pairings) successfully merged out of 70 (in 1 pairings) input.
+452 paired-reads (in 1 unique pairings) successfully merged out of 452 (in 1 pairings) input.
+17 paired-reads (in 1 unique pairings) successfully merged out of 17 (in 1 pairings) input.
+0 paired-reads (in 0 unique pairings) successfully merged out of 2 (in 1 pairings) input.
+0 paired-reads (in 0 unique pairings) successfully merged out of 8 (in 1 pairings) input.
+570 paired-reads (in 1 unique pairings) successfully merged out of 570 (in 1 pairings) input.
+19 paired-reads (in 1 unique pairings) successfully merged out of 19 (in 1 pairings) input.
+126 paired-reads (in 1 unique pairings) successfully merged out of 126 (in 1 pairings) input.
+129 paired-reads (in 1 unique pairings) successfully merged out of 129 (in 1 pairings) input.
+2 paired-reads (in 1 unique pairings) successfully merged out of 2 (in 1 pairings) input.
+41 paired-reads (in 1 unique pairings) successfully merged out of 41 (in 1 pairings) input.
+55 paired-reads (in 1 unique pairings) successfully merged out of 55 (in 1 pairings) input.
+273 paired-reads (in 1 unique pairings) successfully merged out of 273 (in 1 pairings) input.
+9 paired-reads (in 1 unique pairings) successfully merged out of 9 (in 1 pairings) input.
+173 paired-reads (in 1 unique pairings) successfully merged out of 173 (in 1 pairings) input.
+26 paired-reads (in 1 unique pairings) successfully merged out of 26 (in 1 pairings) input.
+5 paired-reads (in 1 unique pairings) successfully merged out of 5 (in 1 pairings) input.
+188 paired-reads (in 1 unique pairings) successfully merged out of 188 (in 1 pairings) input.
+145 paired-reads (in 1 unique pairings) successfully merged out of 145 (in 1 pairings) input.
+1647 paired-reads (in 1 unique pairings) successfully merged out of 1647 (in 1 pairings) input.
+965 paired-reads (in 1 unique pairings) successfully merged out of 965 (in 1 pairings) input.
+128 paired-reads (in 1 unique pairings) successfully merged out of 128 (in 1 pairings) input.
+6 paired-reads (in 1 unique pairings) successfully merged out of 6 (in 1 pairings) input.
+94 paired-reads (in 2 unique pairings) successfully merged out of 432 (in 4 pairings) input.
+414 paired-reads (in 1 unique pairings) successfully merged out of 414 (in 1 pairings) input.
+762 paired-reads (in 1 unique pairings) successfully merged out of 762 (in 1 pairings) input.
+59 paired-reads (in 1 unique pairings) successfully merged out of 59 (in 1 pairings) input.
+85 paired-reads (in 1 unique pairings) successfully merged out of 85 (in 1 pairings) input.
+11 paired-reads (in 1 unique pairings) successfully merged out of 11 (in 1 pairings) input.
+3 paired-reads (in 1 unique pairings) successfully merged out of 3 (in 1 pairings) input.
+84 paired-reads (in 1 unique pairings) successfully merged out of 84 (in 1 pairings) input.
+263 paired-reads (in 1 unique pairings) successfully merged out of 263 (in 1 pairings) input.
+15 paired-reads (in 1 unique pairings) successfully merged out of 15 (in 1 pairings) input.
+851 paired-reads (in 1 unique pairings) successfully merged out of 851 (in 1 pairings) input.
+4 paired-reads (in 1 unique pairings) successfully merged out of 4 (in 1 pairings) input.
+54 paired-reads (in 1 unique pairings) successfully merged out of 54 (in 1 pairings) input.
+3 paired-reads (in 1 unique pairings) successfully merged out of 3 (in 1 pairings) input.
+2 paired-reads (in 1 unique pairings) successfully merged out of 2 (in 1 pairings) input.
+19 paired-reads (in 1 unique pairings) successfully merged out of 19 (in 1 pairings) input.
+59 paired-reads (in 1 unique pairings) successfully merged out of 59 (in 1 pairings) input.
+25 paired-reads (in 1 unique pairings) successfully merged out of 25 (in 1 pairings) input.
+37 paired-reads (in 1 unique pairings) successfully merged out of 37 (in 1 pairings) input.
+157 paired-reads (in 1 unique pairings) successfully merged out of 157 (in 1 pairings) input.
+7 paired-reads (in 1 unique pairings) successfully merged out of 7 (in 1 pairings) input.
+280 paired-reads (in 1 unique pairings) successfully merged out of 280 (in 1 pairings) input.
+56 paired-reads (in 1 unique pairings) successfully merged out of 56 (in 1 pairings) input.
+33 paired-reads (in 1 unique pairings) successfully merged out of 33 (in 1 pairings) input.
+47 paired-reads (in 1 unique pairings) successfully merged out of 47 (in 1 pairings) input.
+153 paired-reads (in 1 unique pairings) successfully merged out of 153 (in 1 pairings) input.
+3 paired-reads (in 1 unique pairings) successfully merged out of 3 (in 1 pairings) input.
+142 paired-reads (in 1 unique pairings) successfully merged out of 142 (in 1 pairings) input.
+1 paired-reads (in 1 unique pairings) successfully merged out of 1 (in 1 pairings) input.
+76 paired-reads (in 1 unique pairings) successfully merged out of 76 (in 1 pairings) input.
+3 paired-reads (in 1 unique pairings) successfully merged out of 3 (in 1 pairings) input.
+3 paired-reads (in 1 unique pairings) successfully merged out of 3 (in 1 pairings) input.
+138 paired-reads (in 1 unique pairings) successfully merged out of 138 (in 1 pairings) input.
+117 paired-reads (in 1 unique pairings) successfully merged out of 117 (in 1 pairings) input.
+264 paired-reads (in 1 unique pairings) successfully merged out of 264 (in 1 pairings) input.
+280 paired-reads (in 1 unique pairings) successfully merged out of 280 (in 1 pairings) input.
+17 paired-reads (in 1 unique pairings) successfully merged out of 17 (in 1 pairings) input.
+12 paired-reads (in 1 unique pairings) successfully merged out of 12 (in 1 pairings) input.
+73 paired-reads (in 1 unique pairings) successfully merged out of 73 (in 1 pairings) input.
+193 paired-reads (in 1 unique pairings) successfully merged out of 193 (in 1 pairings) input.
+46 paired-reads (in 1 unique pairings) successfully merged out of 46 (in 1 pairings) input.
+1061 paired-reads (in 1 unique pairings) successfully merged out of 1061 (in 1 pairings) input.
+1 paired-reads (in 1 unique pairings) successfully merged out of 1 (in 1 pairings) input.
+1 paired-reads (in 1 unique pairings) successfully merged out of 1 (in 1 pairings) input.
+1 paired-reads (in 1 unique pairings) successfully merged out of 1 (in 1 pairings) input.
+1 paired-reads (in 1 unique pairings) successfully merged out of 1 (in 1 pairings) input.
+52 paired-reads (in 1 unique pairings) successfully merged out of 52 (in 1 pairings) input.
+114 paired-reads (in 1 unique pairings) successfully merged out of 114 (in 1 pairings) input.
+2 paired-reads (in 1 unique pairings) successfully merged out of 2 (in 1 pairings) input.
+60 paired-reads (in 1 unique pairings) successfully merged out of 60 (in 1 pairings) input.
+11 paired-reads (in 1 unique pairings) successfully merged out of 11 (in 1 pairings) input.
+1150 paired-reads (in 1 unique pairings) successfully merged out of 1150 (in 1 pairings) input.
+51 paired-reads (in 1 unique pairings) successfully merged out of 51 (in 1 pairings) input.
+11 paired-reads (in 1 unique pairings) successfully merged out of 11 (in 1 pairings) input.
+71 paired-reads (in 1 unique pairings) successfully merged out of 71 (in 1 pairings) input.
+80 paired-reads (in 1 unique pairings) successfully merged out of 80 (in 1 pairings) input.
+176 paired-reads (in 1 unique pairings) successfully merged out of 176 (in 1 pairings) input.
+4 paired-reads (in 1 unique pairings) successfully merged out of 4 (in 1 pairings) input.
+2 paired-reads (in 1 unique pairings) successfully merged out of 2 (in 1 pairings) input.
+33 paired-reads (in 1 unique pairings) successfully merged out of 33 (in 1 pairings) input.
+149 paired-reads (in 1 unique pairings) successfully merged out of 149 (in 1 pairings) input.
+110 paired-reads (in 1 unique pairings) successfully merged out of 110 (in 1 pairings) input.
+201 paired-reads (in 1 unique pairings) successfully merged out of 201 (in 1 pairings) input.
+92 paired-reads (in 1 unique pairings) successfully merged out of 92 (in 1 pairings) input.
+10 paired-reads (in 1 unique pairings) successfully merged out of 10 (in 1 pairings) input.
+17 paired-reads (in 1 unique pairings) successfully merged out of 17 (in 1 pairings) input.
+19 paired-reads (in 1 unique pairings) successfully merged out of 19 (in 1 pairings) input.
+96 paired-reads (in 1 unique pairings) successfully merged out of 96 (in 1 pairings) input.
+118 paired-reads (in 1 unique pairings) successfully merged out of 118 (in 1 pairings) input.
+55 paired-reads (in 1 unique pairings) successfully merged out of 55 (in 1 pairings) input.
+6 paired-reads (in 1 unique pairings) successfully merged out of 6 (in 1 pairings) input.
+2 paired-reads (in 1 unique pairings) successfully merged out of 2 (in 1 pairings) input.
+808 paired-reads (in 1 unique pairings) successfully merged out of 808 (in 1 pairings) input.
+25 paired-reads (in 1 unique pairings) successfully merged out of 25 (in 1 pairings) input.
+204 paired-reads (in 1 unique pairings) successfully merged out of 204 (in 1 pairings) input.
+20 paired-reads (in 1 unique pairings) successfully merged out of 20 (in 1 pairings) input.
+216 paired-reads (in 1 unique pairings) successfully merged out of 216 (in 1 pairings) input.
+1706 paired-reads (in 1 unique pairings) successfully merged out of 1706 (in 1 pairings) input.
+42 paired-reads (in 1 unique pairings) successfully merged out of 42 (in 1 pairings) input.
+2408 paired-reads (in 1 unique pairings) successfully merged out of 2408 (in 1 pairings) input.
+9 paired-reads (in 1 unique pairings) successfully merged out of 9 (in 1 pairings) input.
+75 paired-reads (in 1 unique pairings) successfully merged out of 75 (in 1 pairings) input.
+5 paired-reads (in 1 unique pairings) successfully merged out of 5 (in 1 pairings) input.
+15 paired-reads (in 1 unique pairings) successfully merged out of 15 (in 1 pairings) input.
+127 paired-reads (in 1 unique pairings) successfully merged out of 127 (in 1 pairings) input.
+571 paired-reads (in 1 unique pairings) successfully merged out of 571 (in 1 pairings) input.
+85 paired-reads (in 1 unique pairings) successfully merged out of 85 (in 1 pairings) input.
+25 paired-reads (in 1 unique pairings) successfully merged out of 25 (in 1 pairings) input.
+2632 paired-reads (in 1 unique pairings) successfully merged out of 2632 (in 1 pairings) input.
+203 paired-reads (in 1 unique pairings) successfully merged out of 203 (in 1 pairings) input.
+114 paired-reads (in 1 unique pairings) successfully merged out of 114 (in 1 pairings) input.
+11 paired-reads (in 1 unique pairings) successfully merged out of 11 (in 1 pairings) input.
+123 paired-reads (in 1 unique pairings) successfully merged out of 123 (in 1 pairings) input.
+10 paired-reads (in 1 unique pairings) successfully merged out of 10 (in 1 pairings) input.
+67 paired-reads (in 1 unique pairings) successfully merged out of 67 (in 1 pairings) input.
+1 paired-reads (in 1 unique pairings) successfully merged out of 1 (in 1 pairings) input.
+79 paired-reads (in 1 unique pairings) successfully merged out of 79 (in 1 pairings) input.
+3 paired-reads (in 1 unique pairings) successfully merged out of 3 (in 1 pairings) input.
+12 paired-reads (in 1 unique pairings) successfully merged out of 12 (in 1 pairings) input.
+135 paired-reads (in 1 unique pairings) successfully merged out of 135 (in 1 pairings) input.
+36 paired-reads (in 1 unique pairings) successfully merged out of 36 (in 1 pairings) input.
+10 paired-reads (in 1 unique pairings) successfully merged out of 10 (in 1 pairings) input.
+25 paired-reads (in 1 unique pairings) successfully merged out of 25 (in 1 pairings) input.
+44 paired-reads (in 1 unique pairings) successfully merged out of 44 (in 1 pairings) input.
+2 paired-reads (in 1 unique pairings) successfully merged out of 2 (in 1 pairings) input.
+2 paired-reads (in 1 unique pairings) successfully merged out of 2 (in 1 pairings) input.
+1 paired-reads (in 1 unique pairings) successfully merged out of 1 (in 1 pairings) input.
+4 paired-reads (in 1 unique pairings) successfully merged out of 4 (in 1 pairings) input.
+23 paired-reads (in 1 unique pairings) successfully merged out of 23 (in 1 pairings) input.
+50 paired-reads (in 1 unique pairings) successfully merged out of 50 (in 1 pairings) input.
+76 paired-reads (in 1 unique pairings) successfully merged out of 76 (in 1 pairings) input.
+201 paired-reads (in 1 unique pairings) successfully merged out of 201 (in 1 pairings) input.
+124 paired-reads (in 1 unique pairings) successfully merged out of 124 (in 1 pairings) input.
+82 paired-reads (in 1 unique pairings) successfully merged out of 82 (in 1 pairings) input.
+48 paired-reads (in 1 unique pairings) successfully merged out of 48 (in 1 pairings) input.
+55 paired-reads (in 1 unique pairings) successfully merged out of 55 (in 1 pairings) input.
+3 paired-reads (in 1 unique pairings) successfully merged out of 3 (in 1 pairings) input.
+197 paired-reads (in 1 unique pairings) successfully merged out of 197 (in 1 pairings) input.
+98 paired-reads (in 1 unique pairings) successfully merged out of 98 (in 1 pairings) input.
+5 paired-reads (in 1 unique pairings) successfully merged out of 5 (in 1 pairings) input.
+10 paired-reads (in 1 unique pairings) successfully merged out of 10 (in 1 pairings) input.
+34 paired-reads (in 1 unique pairings) successfully merged out of 34 (in 1 pairings) input.
+15 paired-reads (in 1 unique pairings) successfully merged out of 15 (in 1 pairings) input.
+624 paired-reads (in 1 unique pairings) successfully merged out of 624 (in 1 pairings) input.
+81 paired-reads (in 1 unique pairings) successfully merged out of 81 (in 1 pairings) input.
+1 paired-reads (in 1 unique pairings) successfully merged out of 1 (in 1 pairings) input.
+263 paired-reads (in 1 unique pairings) successfully merged out of 263 (in 1 pairings) input.
+28 paired-reads (in 1 unique pairings) successfully merged out of 28 (in 1 pairings) input.
+324 paired-reads (in 1 unique pairings) successfully merged out of 324 (in 1 pairings) input.
+3 paired-reads (in 1 unique pairings) successfully merged out of 3 (in 1 pairings) input.
+28 paired-reads (in 1 unique pairings) successfully merged out of 28 (in 1 pairings) input.
+3 paired-reads (in 1 unique pairings) successfully merged out of 3 (in 1 pairings) input.
+298 paired-reads (in 1 unique pairings) successfully merged out of 298 (in 1 pairings) input.
+111 paired-reads (in 1 unique pairings) successfully merged out of 111 (in 1 pairings) input.
+242 paired-reads (in 1 unique pairings) successfully merged out of 242 (in 1 pairings) input.
+54 paired-reads (in 1 unique pairings) successfully merged out of 54 (in 1 pairings) input.
+294 paired-reads (in 1 unique pairings) successfully merged out of 294 (in 1 pairings) input.
+1 paired-reads (in 1 unique pairings) successfully merged out of 1 (in 1 pairings) input.
+14 paired-reads (in 1 unique pairings) successfully merged out of 14 (in 1 pairings) input.
+47 paired-reads (in 1 unique pairings) successfully merged out of 47 (in 1 pairings) input.
+11 paired-reads (in 1 unique pairings) successfully merged out of 11 (in 1 pairings) input.
+4 paired-reads (in 1 unique pairings) successfully merged out of 4 (in 1 pairings) input.
+77 paired-reads (in 1 unique pairings) successfully merged out of 77 (in 1 pairings) input.
+172 paired-reads (in 1 unique pairings) successfully merged out of 172 (in 1 pairings) input.
+138 paired-reads (in 1 unique pairings) successfully merged out of 138 (in 1 pairings) input.
+Duplicate sequences detected and merged.
+Identified 0 bimeras out of 249 input sequences.

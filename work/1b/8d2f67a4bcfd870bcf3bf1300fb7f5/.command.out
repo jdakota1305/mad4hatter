@@ -1,0 +1,15 @@
+$alignment_threshold
+[1] 60
+
+$amplicon_table
+[1] "v4_amplicon_info.tsv"
+
+$clusters
+[1] "clusters.concatenated.collapsed.txt"
+
+$n_cores
+[1] 6
+
+$refseq_fasta
+[1] "v4_reference.fasta"
+
