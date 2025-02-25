@@ -1,2 +1,0 @@
-#!/bin/bash -euo pipefail
-bash cutadapt_process.sh         -1 7S1-10K-parasitedensity-0p25x-primerconcentration-allpools-ENV-PV4-replicate1_S1_L001_R1_001.fastq.gz         -2 7S1-10K-parasitedensity-0p25x-primerconcentration-allpools-ENV-PV4-replicate1_S1_L001_R2_001.fastq.gz         -r rev_primers.fasta         -f fwd_primers.fasta         -m 100         -s miseq         -e 0         -c 2         -o demultiplexed_fastqs

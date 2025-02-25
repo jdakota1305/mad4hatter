@@ -1,6 +1,0 @@
-SampleID	Stage	Reads
-7S1-10K-parasitedensity-0p25x-primerconcentration-allpools-ENV-PV4-replicate1_S1_L001	Input	162920
-7S1-10K-parasitedensity-0p25x-primerconcentration-allpools-ENV-PV4-replicate1_S1_L001	No Dimers	43475
-7S1-10K-parasitedensity-0p25x-primerconcentration-allpools-ENV-PV4-replicate1_S1_L001	Amplicons	36211
-7S1-10K-parasitedensity-0p25x-primerconcentration-allpools-ENV-PV4-replicate1_S1_L001	OutputDada2	35687
-7S1-10K-parasitedensity-0p25x-primerconcentration-allpools-ENV-PV4-replicate1_S1_L001	OutputPostprocessing	35224

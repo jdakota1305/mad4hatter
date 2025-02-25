@@ -1,4 +1,0 @@
-infile: alignments.txt
-outfile: filtered.alignments.txt
-threshold: 
-Filtered data saved to filtered.alignments.txt
